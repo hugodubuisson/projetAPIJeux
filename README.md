@@ -1,5 +1,7 @@
 # Projet Laravel - Application de Gestion de Jeux de Société
 
+Fait par Hugo DUBUISSON, Theo VAMBRE et Louis DUTOMBOIS
+
 ## Introduction
 Vous êtes des étudiants en informatique en deuxième année et vous avez été chargés de créer une application Laravel complète pour gérer des jeux de société. Cette application doit se connecter à une API externe offrant un CRUD complet pour les jeux de société. Vous devez également mettre en place un workflow Git similaire à Gitflow pour la gestion de versions.
 

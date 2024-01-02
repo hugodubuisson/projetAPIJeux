@@ -19,3 +19,8 @@ Route::get('/', [JeuxController::class, 'vue_tableau_jeux'])->name('index');
 Route::get('/game/{id}', [JeuxController::class, 'showGame'])->name('showGame');
 
 Route::delete('/delete-game/{id}', [JeuxController::class, 'deleteGame'])->name('deleteGame');
+
+Route::get('/add-game', [JeuxController::class, 'showAddGameForm'])->name('showAddGameForm');
+
+Route::post('/add-game', [JeuxController::class, 'addGame'])->name('addGame');
+

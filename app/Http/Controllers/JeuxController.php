@@ -63,6 +63,11 @@ class JeuxController extends Controller
         }
     }
 
+    public function showAddGameForm()
+    {
+        return view('add_game_form');
+    }
+
     public function showGame($id)
     {
         $game = $this->getJeuAvecId($id-1);

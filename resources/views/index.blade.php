@@ -9,7 +9,7 @@
 
 <h1>Liste des jeux</h1>
 
-<a href="{{ route('addGameForm') }}">Ajouter un jeu</a>
+<button><a href="{{ route('showAddGameForm') }}">Ajouter un jeu</a></button>
 
 @if(count($jeux) > 0)
     <ul>

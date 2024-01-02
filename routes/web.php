@@ -24,3 +24,7 @@ Route::get('/add-game', [JeuxController::class, 'showAddGameForm'])->name('showA
 
 Route::post('/add-game', [JeuxController::class, 'addGame'])->name('addGame');
 
+Route::get('/edit-game/{id}', [JeuxController::class, 'showEditGameForm'])->name('editGameForm');
+
+Route::put('/update-game/{id}', [JeuxController::class, 'updateGame'])->name('updateGame');
+

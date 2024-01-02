@@ -100,4 +100,40 @@ class JeuxController extends Controller
         }
     }
 
+    public function showEditGameForm($id)
+    {
+        $games = http::get('http://localhost:8080/api/board-games')->json();
+
+        $game = collect($games)->firstWhere('id', $id);
+
+        if (!$game) {
+            return "Jeu non trouvé.";
+        }
+
+        return view('edit_game_form', ['game' => $game]);
+    }
+
+    public function updateGame(Request $request, $id)
+    {
+        $updatedGame = [
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'price' => $request->input('price'),
+            'number_gamer' => $request->input('number_gamer'),
+            'playing_time' => $request->input('playing_time'),
+            'complexity' => $request->input('complexity'),
+            'rating' => $request->input('rating'),
+            'category' => $request->input('category'),
+            'published_date' => $request->input('published_date'),
+        ];
+
+        $response = Http::put("http://localhost:8080/api/board-games/{$id}", $updatedGame);
+
+        if ($response->successful()) {
+            return redirect()->route('index')->with('success', 'Le jeu a été mis à jour avec succès.');
+        } else {
+            return redirect()->back()->with('error', 'Une erreur est survenue lors de la mise à jour du jeu.');
+        }
+    }
+
 }

@@ -26,6 +26,9 @@
                     <button type="submit">Supprimer</button>
                 </form>
             </li>
+            <li>
+                <button><a href="{{ route('editGameForm', ['id' => $jeu['id']]) }}">Modifier</a></button>
+            </li>
         @endforeach
     </ul>
 @else

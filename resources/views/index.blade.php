@@ -9,6 +9,8 @@
 
 <h1>Liste des jeux</h1>
 
+<a href="{{ route('addGameForm') }}">Ajouter un jeu</a>
+
 @if(count($jeux) > 0)
     <ul>
         @foreach($jeux as $jeu)
@@ -17,6 +19,13 @@
             <li>{{ $jeu['image'] }}</li>
             <li>Nombre de joueur : {{ $jeu['number_gamer'] }}</li>
             <li><a href="{{ route('showGame', ['id' => $jeu['id']]) }}">Voir les détails</a></li>
+            <li>
+                <form method="post" action="{{ route('deleteGame', ['id' => $jeu['id']]) }}">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Supprimer</button>
+                </form>
+            </li>
         @endforeach
     </ul>
 @else

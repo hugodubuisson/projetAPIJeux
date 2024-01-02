@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [JeuxController::class, 'vue_tableau_jeux'])->name('index');
 
 Route::get('/game/{id}', [JeuxController::class, 'showGame'])->name('showGame');
+
+Route::delete('/delete-game/{id}', [JeuxController::class, 'deleteGame'])->name('deleteGame');

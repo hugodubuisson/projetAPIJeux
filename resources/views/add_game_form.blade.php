@@ -38,6 +38,10 @@
     <input type="number" name="playing_time" required>
     <br>
 
+    <label for="image">Importer une image :</label>
+    <input type="file" name="image">
+    <br>
+
 
     <button type="submit">Ajouter le jeu</button>
 </form>

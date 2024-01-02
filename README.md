@@ -1,66 +1,66 @@
-# Projet Laravel - Application de Gestion de Jeux de Société
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-Fait par Hugo DUBUISSON, Theo VAMBRE et Louis DUTOMBOIS
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Introduction
-Vous êtes des étudiants en informatique en deuxième année et vous avez été chargés de créer une application Laravel complète pour gérer des jeux de société. Cette application doit se connecter à une API externe offrant un CRUD complet pour les jeux de société. Vous devez également mettre en place un workflow Git similaire à Gitflow pour la gestion de versions.
+## About Laravel
 
-## Objectifs
-1. Créer une application Laravel qui utilise l'ensemble du CRUD (Create, Read, Update, Delete) pour interagir avec une API externe de gestion de jeux de société.
-2. Utiliser Git pour la gestion de versions avec un workflow inspiré de Gitflow.
-3. Découper les différentes tâches à effectuer entre les membres de l'équipe.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Spécifications Techniques
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-### Partie Laravel
-- La page d'accueil de l'application doit afficher une liste de jeux de société avec des détails tels que le nom, la catégorie, la note, etc.
-- La navigation doit inclure des liens pour afficher les détails d'un jeu, ajouter un nouveau jeu, éditer un jeu existant et supprimer un jeu.
-- La page de détails d'un jeu doit afficher toutes les informations disponibles pour ce jeu.
-- La page d'ajout de jeu doit inclure un formulaire pour saisir toutes les informations nécessaires (nom, description, prix, image, catégorie, vidéo, etc.).
-- La page de modification d'un jeu doit permettre de mettre à jour toutes les informations du jeu.
-- La suppression d'un jeu doit nécessiter une confirmation avant l'effacement définitif.
-- Utilisez Tailwind CSS pour styliser votre application avec une palette de couleurs (rouge, gris, blanc) en suivant un style flat design.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### Partie Gitflow
-- Initialisez un référentiel Git pour votre projet.
-- Utilisez un workflow Git similaire à Gitflow avec des branches pour les fonctionnalités, les correctifs, et les versions.
-- Assurez-vous d'inclure des messages de commit significatifs et des commentaires là où cela est nécessaire.
-- Créez une branche `develop` pour le développement continu, des branches `feature/` pour de nouvelles fonctionnalités, et une branche `release/` pour la préparation de la version.
-- Pratiquez la fusion des branches en utilisant des pull requests.
+## Learning Laravel
 
-## Découpage des Tâches
-1. **Analyse des Besoins :**
-   - Identifier les fonctionnalités clés de l'application.
-   - Définir les entités et les relations nécessaires.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-2. **Configuration de l'Environnement :**
-   - Mettre en place un projet Laravel.
-   - Configurer le modèle de base de données.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-3. **Intégration de l'API :**
-   - Créer des services pour interagir avec l'API.
-   - Mettre en place les appels API nécessaires pour le CRUD.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-4. **Développement des Pages :**
-   - Créer les vues pour la page d'accueil, la page de détails, la page d'ajout et la page de modification.
-   - Intégrer les fonctionnalités Laravel dans ces vues.
+## Laravel Sponsors
 
-5. **Stylisation avec Tailwind CSS :**
-   - Appliquer le style flat design avec la palette de couleurs spécifiée.
-   - Assurer la responsivité de l'interface utilisateur.
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-6. **Gitflow Workflow :**
-   - Créer des branches pour chaque fonctionnalité.
-   - Gérer les pull requests et les fusions de branches.
+### Premium Partners
 
-## Livrables Attendus
-1. Un projet Laravel fonctionnel avec toutes les fonctionnalités spécifiées.
-2. Un référentiel Git sur une plateforme telle que GitHub avec un historique de commit propre et des branches bien organisées.
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
-## Évaluation
-Votre projet sera évalué en fonction de la fonctionnalité, de la qualité du code, du respect des bonnes pratiques Laravel, de l'interface utilisateur, de la gestion de versions Git, et de la documentation du projet.
+## Contributing
 
-## Date de Remise
-[Date de Remise du Projet]
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Bonne chance dans votre projet de développement Laravel!
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

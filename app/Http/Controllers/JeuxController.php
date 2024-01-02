@@ -70,7 +70,15 @@ class JeuxController extends Controller
 
     public function showGame($id)
     {
-        $game = $this->getJeuAvecId($id-1);
+        $games = http::get('http://localhost:8080/api/board-games')->json();
+        $game = null;
+
+        foreach ($games as $jeu) {
+            if ($jeu['id'] == $id) {
+                $game = $jeu;
+                break;
+            }
+        }
 
         if (!$game) {
             return "Jeu non trouvé.";

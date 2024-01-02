@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/footer.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
     <title>Ajouter un jeu</title>
 </head>
 <body>
-
+<x-header></x-header>
 <h1>Ajouter un jeu</h1>
 
 <form method="post" action="{{ route('addGame') }}">
@@ -41,6 +43,6 @@
 
     <button type="submit">Ajouter le jeu</button>
 </form>
-
+<x-footer></x-footer>
 </body>
 </html>

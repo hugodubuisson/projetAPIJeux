@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/footer.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
     <title>Modifier le jeu</title>
 </head>
 <body>
-
+<x-header></x-header>
 <h1>Modifier le jeu</h1>
 
 <form method="post" action="{{ route('updateGame', ['id' => $game['id']]) }}">
@@ -52,7 +54,7 @@
 
     <button type="submit">Mettre à jour le jeu</button>
 </form>
-
+<x-footer></x-footer>
 </body>
 </html>
 

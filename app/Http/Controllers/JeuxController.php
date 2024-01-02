@@ -51,7 +51,7 @@ class JeuxController extends Controller
             'rating' => $request->input('rating'),
             'category' => $request->input('category'),
             'published_date' => $request->input('published_date'),
-            // Ajoutez d'autres champs selon votre modèle BoardGame
+
         ];
 
         $response = Http::post('http://localhost:8080/api/board-games', $newGame);
@@ -76,15 +76,13 @@ class JeuxController extends Controller
 
     public function deleteGame($id)
     {
-        // Effectuez ici la logique de suppression du jeu avec l'ID $id
-        // Par exemple, si vous utilisez une API externe :
         $response = Http::delete("http://localhost:8080/api/board-games/{$id}");
 
         if ($response->successful()) {
-            // Redirigez l'utilisateur vers une page ou un message de succès
+
             return redirect()->route('index')->with('success', 'Le jeu a été supprimé avec succès.');
         } else {
-            // Redirigez l'utilisateur avec un message d'erreur s'il y a un problème lors de la suppression
+
             return redirect()->route('index')->with('error', 'Une erreur est survenue lors de la suppression du jeu.');
         }
     }

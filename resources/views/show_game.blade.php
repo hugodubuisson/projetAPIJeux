@@ -10,7 +10,9 @@
 @if(isset($game))
     <ul>
         <li>Nom du jeu : {{ $game['name'] }}</li>
-        <li>{{ $game['image'] }}</li>
+        @if(isset($game['image']))
+            <li>Image : <img src="{{ $game['image'] }}" alt="Image du jeu"></li>
+        @endif
         <li>Description : {{ $game['description'] }}</li>
         <li>Prix : {{ $game['price'] }}</li>
         <li>Nombre de joueur : {{ $game['number_gamer'] }}</li>

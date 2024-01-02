@@ -51,6 +51,7 @@ class JeuxController extends Controller
             'rating' => $request->input('rating'),
             'category' => $request->input('category'),
             'published_date' => $request->input('published_date'),
+            'image' => $request->input('image'),
 
         ];
 

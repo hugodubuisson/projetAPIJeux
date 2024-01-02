@@ -18,7 +18,9 @@
         @foreach($jeux as $jeu)
             <li>Nom du jeu : {{ $jeu['name'] }}</li>
             <li>prix : {{ $jeu['price'] }}</li>
-            <li>{{ $jeu['image'] }}</li>
+            @if(isset($jeu['image']))
+                <li>Image : <img src="{{ $jeu['image'] }}" alt="Image du jeu"></li>
+            @endif
             <li>Nombre de joueur : {{ $jeu['number_gamer'] }}</li>
             <li><a href="{{ route('showGame', ['id' => $jeu['id']]) }}">Voir les détails</a></li>
             <li>

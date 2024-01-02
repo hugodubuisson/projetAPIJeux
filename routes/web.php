@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JeuxController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [JeuxController::class, 'vue_tableau_jeux'])->name('index');
 
-Route::get('/ajout', function () {
-    return view('welcome');
-});
-
-Route::get('/modification', function () {
-    return view('welcome');
-});
-
+Route::get('/game/{id}', [JeuxController::class, 'showGame'])->name('showGame');

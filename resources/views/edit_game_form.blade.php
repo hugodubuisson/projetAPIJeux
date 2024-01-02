@@ -50,6 +50,10 @@
     <input type="date" name="published_date" value="{{ $game['published_date'] }}" required>
     <br>
 
+    <label for="image">Nouvelle image:</label>
+    <input type="file" name="image">
+    <br>
+
     <button type="submit">Mettre à jour le jeu</button>
 </form>
 

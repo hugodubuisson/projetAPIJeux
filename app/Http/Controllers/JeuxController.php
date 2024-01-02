@@ -126,6 +126,7 @@ class JeuxController extends Controller
             'rating' => $request->input('rating'),
             'category' => $request->input('category'),
             'published_date' => $request->input('published_date'),
+            'image' => $request->input('image'),
         ];
 
         $response = Http::put("http://localhost:8080/api/board-games/{$id}", $updatedGame);

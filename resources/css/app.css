@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #343a40;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr 200px;
+    grid-template-rows: 80px 1fr 80px;
+}
+
+menu {
+    background-color: #69db7c;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 0 40px;
+}
+
+main {
+    grid-column: 1 / 3;
+    overflow: scroll;
+    padding: 10px 20px;
+}
+
+aside {
+    grid-column: 3 / -1;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+footer {
+    grid-column: 1 / -1;
+}
+
+
+.main-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.main-container a {
+    color: white;
+}
+
+menu button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #37b24d;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 6px 10px;
+}
+
+menu .a-droite {
+    flex: 1 1 auto;
+}
+
+menu button a:any-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+menu button a:any-link {
+    /*color: #1098ad;*/
+    color: #1179bb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+menu button a:hover {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: underline orangered;
+}
+
+menu button a:active {
+    background-color: black;
+    font-style: italic;
+}
+
+
+.img-land {
+    display: block;
+    width: 60vw;
+    margin: 10px auto;
+}
+
+.container {
+    display: grid;
+    width: 650px;
+    grid-template-columns: 100px 1fr 100px 100px;
+    border: #1098ad 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    row-gap: 10px;
+    margin: 0 auto;
+}
+
+.tache-des {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+.les-taches {
+    display: grid;
+    width: 700px;
+    grid-template-columns: 50px 1fr 1fr 50px 200px;
+    border: #1098ad 1px solid;
+    border-radius: 10px;
+    padding: 20px;
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: 0 auto
+}
+
+.main-container .entete {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.main-container button.aDroite {
+    position: absolute;
+    right: 100px;
+    top: 5px;
+}
+
+.main-container form, .errors {
+    width: 600px;
+    margin: 60px auto;
+    border: #d6336c 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 600px;
+}
+
+.succes {
+    width: 600px;
+    margin: 60px auto;
+    border: #5ed633 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 600px;
+}
+
+.main-container .form-create * {
+    box-sizing: border-box;
+}
+
+.main-container .form-control {
+    margin-bottom: 20px;
+}
+
+.main-container .form-control, .form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-container .form-label {
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.main-container .form-label {
+    font-weight: bold;
+}
+
+.main-container .form-input {
+    flex: 1 0 220px;
+}
+
+.form-buttons {
+    justify-content: space-around;
+}
+
+.main-container button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.main-container button[type="reset"] {
+    background: #d53838;
+}
+
+
+.errors li {
+    list-style: none;
+    color: red;
+    font-size: 1.2rem;
+}
+
+.titre-erreurs {
+    text-align: center;
+    color: #d6336c;
+    margin-bottom: 10px;
+}
+
+
+.titre-succes {
+    text-align: center;
+    color: #5ed633;
+    margin-bottom: 10px;
+}
+
+.main-container td {
+    text-align: center;
+}
+
+.main-container .largeur {
+    width: 50%;
+    text-align: justify;
+}
+
+.main-container .msg-info {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    justify-content: space-around;
+}
+
+.main-container .msg-info.primary {
+    background-color: #c0eb75;
+    color: #66a80f;
+}
+
+.main-container .msg-info.warning {
+    background-color: #ffe066;
+    color: #f08c00;
+}
+
+.main-container .msg-info.error {
+    background-color: #ffa8a8;
+    color: #e03131;
+}
+
+.main-container .msg-icon {
+    width: 24px;
+    padding: 5px;
+}
+
+.main-container .msg {
+    flex: 1 0 140px;
+    max-width: 220px;
+}
+
+.main-container .image {
+    margin: 20px auto;
+    width: 200px;
+}
+
+
+.main-container .image img {
+    max-width: 100px;
+}
+
+.main-container table a {
+    color: black;
+}
+
+.main-container table a:link {
+    color: black;
+    text-decoration: none;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.auCentre {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.textePage {
+    font-family: "Arial Black", sans-serif;
+    font-size: 10rem;
+    text-align: center;
+}

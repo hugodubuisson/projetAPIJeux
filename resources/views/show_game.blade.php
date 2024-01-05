@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <title>Détails du jeu</title>
-    <link href="../css/details.css" rel="stylesheet" />
-    <link href="../css/footer.css" rel="stylesheet" />
-    <link href="../css/header.css" rel="stylesheet" />
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/details.css' ])
 </head>
 <body>
 <x-header></x-header>

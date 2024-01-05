@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/footer.css" rel="stylesheet" />
     <link href="../css/header.css" rel="stylesheet" />
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/index.css'])
     <title>Liste des jeux</title>
 </head>
 <body>
@@ -12,32 +13,48 @@
 <h1>Liste des jeux</h1>
 
 <button><a href="{{ route('showAddGameForm') }}">Ajouter un jeu</a></button>
-
 @if(count($jeux) > 0)
-    <ul>
-        @foreach($jeux as $jeu)
-            <li>Nom du jeu : {{ $jeu['name'] }}</li>
-            <li>prix : {{ $jeu['price'] }}</li>
-            @if(isset($jeu['image']))
-                <li>Image : <img src="{{ $jeu['image'] }}" alt="Image du jeu"></li>
-            @endif
-            <li>Nombre de joueur : {{ $jeu['number_gamer'] }}</li>
-            <li><a href="{{ route('showGame', ['id' => $jeu['id']]) }}">Voir les détails</a></li>
-            <li>
-                <form method="post" action="{{ route('deleteGame', ['id' => $jeu['id']]) }}">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Supprimer</button>
-                </form>
-            </li>
-            <li>
-                <button><a href="{{ route('editGameForm', ['id' => $jeu['id']]) }}">Modifier</a></button>
-            </li>
-        @endforeach
-    </ul>
+    <div class="contenu">
+
+            @foreach($jeux as $jeu)
+            <ul>
+                @if(isset($jeu['image']))
+                    <p>Image : <img src="{{ $jeu['image'] }}" alt="Image du jeu" /></p>
+                @endif
+
+                <h3>Nom du jeu : {{ $jeu['name'] }}</h3>
+                <div class="info">
+                    <p>Nombre de joueur : {{ $jeu['number_gamer'] }}</p>
+                    <p>
+                        <button>
+                            <a href="{{ route('showGame', ['id' => $jeu['id']]) }}"
+                            >Voir les dÃ©tails</a></button>
+                    </p>
+                    <p>Prix : {{ $jeu['price'] }}</p>
+                </div>
+                <div class="bouton">
+                    <p>
+                    <form
+                        method="post"
+                        action="{{ route('deleteGame', ['id' => $jeu['id']]) }}"
+                    >
+                        @csrf @method('DELETE')
+                        <button type="submit">Supprimer</button>
+                    </form>
+                    </p>
+                    <p>
+                        <button class="modif">
+                            <a href="{{ route('editGameForm', ['id' => $jeu['id']]) }}">Modifier</a>
+                        </button>
+                    </p>
+                </div></ul>
+            @endforeach
+
+    </div>
 @else
     <p>Aucun jeu disponible pour le moment.</p>
 @endif
 <x-footer></x-footer>
 </body>
+
 </html>

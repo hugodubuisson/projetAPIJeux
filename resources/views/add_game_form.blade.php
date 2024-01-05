@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/footer.css" rel="stylesheet" />
-    <link href="../css/header.css" rel="stylesheet" />
+    @vite(['resources/css/header.css', 'resources/css/footer.css','resources/css/fortify.css'])
     <title>Ajouter un jeu</title>
 </head>
 <body>

@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <title>Détails du jeu</title>
+    @vite(['resources/css/header.css', 'resources/css/footer.css', 'resources/css/details.css' ])
 </head>
 <body>
-
+<x-header></x-header>
 <h1>Détails du jeu</h1>
-
 @if(isset($game))
     <ul>
+
         <li>Nom du jeu : {{ $game['name'] }}</li>
         @if(isset($game['image']))
             <li>Image : <img src="{{ $game['image'] }}" alt="Image du jeu"></li>
@@ -25,6 +26,6 @@
 @else
     <p>Le jeu n'a pas été trouvé.</p>
 @endif
-
+<x-footer></x-footer>
 </body>
 </html>

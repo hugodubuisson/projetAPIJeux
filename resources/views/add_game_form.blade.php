@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite(['resources/css/header.css', 'resources/css/footer.css','resources/css/fortify.css'])
     <title>Ajouter un jeu</title>
 </head>
 <body>
-
+<x-header></x-header>
 <h1>Ajouter un jeu</h1>
 
 <form method="post" action="{{ route('addGame') }}">
@@ -45,6 +46,6 @@
 
     <button type="submit">Ajouter le jeu</button>
 </form>
-
+<x-footer></x-footer>
 </body>
 </html>

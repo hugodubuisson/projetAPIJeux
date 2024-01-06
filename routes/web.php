@@ -28,3 +28,5 @@ Route::get('/edit-game/{id}', [JeuxController::class, 'showEditGameForm'])->name
 
 Route::put('/update-game/{id}', [JeuxController::class, 'updateGame'])->name('updateGame');
 
+Route::get('/home', [JeuxController::class, 'vue_tableau_jeux']
+)->middleware(['auth'])->name('home');

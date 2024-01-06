@@ -1,6 +1,6 @@
 <header>
     <div class="gauche">
-        <a href="{{route('index')}}">images acceuil</a>
+        <a href="{{route('index')}}"><img class="logo" src="{{URL::asset('img/pp.png')}}" alt="idk"> </a>
     </div>
     <div class="centre">
         <h1>Toys Market</h1>

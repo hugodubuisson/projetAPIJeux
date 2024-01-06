@@ -19,17 +19,13 @@
             @foreach($jeux as $jeu)
             <ul>
                 @if(isset($jeu['image']))
-                    <p>Image : <img src="{{ $jeu['image'] }}" alt="Image du jeu" /></p>
+                    <img src="{{ $jeu['image'] }}" alt="Image du jeu" />
                 @endif
 
                 <h3>Nom du jeu : {{ $jeu['name'] }}</h3>
                 <div class="info">
                     <p>Nombre de joueur : {{ $jeu['number_gamer'] }}</p>
-                    <p>
-                        <button>
-                            <a href="{{ route('showGame', ['id' => $jeu['id']]) }}"
-                            >Voir les dÃ©tails</a></button>
-                    </p>
+
                     <p>Prix : {{ $jeu['price'] }}</p>
                 </div>
                 <div class="bouton">
@@ -41,6 +37,11 @@
                         @csrf @method('DELETE')
                         <button type="submit">Supprimer</button>
                     </form>
+                    </p>
+                    <p>
+                        <button>
+                            <a href="{{ route('showGame', ['id' => $jeu['id']]) }}"
+                            >Voir les détails</a></button>
                     </p>
                     <p>
                         <button class="modif">

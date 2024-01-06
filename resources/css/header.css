@@ -4,19 +4,22 @@ h1 {
 }
 
 header {
-    background-color: black;
     display: flex;
     gap: 30px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border: 2px solid white;
 }
 
 header a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 header > .droite > a {
-    background-color: orange;
+    background-color: white;
     padding: 10px;
+    border-radius: 10px;
 }
 
 header .droite,
@@ -24,3 +27,10 @@ header .gauche {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.logo{
+    width: 180px;
+    height: 100px;
+}
+
+

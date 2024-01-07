@@ -1,0 +1,84 @@
+body{
+    background: url("../images/fondTest.jpg") center center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h3 {
+    text-align: center;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    height: 215px;
+    width: 370px;
+    border: 2px solid white;
+    color: white;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+}
+
+.contenu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    color: black;
+}
+
+
+p{
+    color: white;
+}
+
+.contenu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.info, .bouton {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info{
+    margin-left: 50px;
+}
+
+.modif {
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modif:hover {
+    background-color: #ffffff;
+}
+
+button {
+    background-color: #ffffff;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: #9ca3af;
+}
